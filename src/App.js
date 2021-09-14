@@ -66,7 +66,7 @@ class App extends Component {
       },
       body: JSON.stringify({
         email: authData.email,
-        password: authData.password,
+        password: authData.password
       })
     })
       .then(res => {
@@ -110,7 +110,7 @@ class App extends Component {
     event.preventDefault();
     this.setState({ authLoading: true });
     fetch('http://localhost:8080/auth/signup', {
-      method: "PUT",
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
